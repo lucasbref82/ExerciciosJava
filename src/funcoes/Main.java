@@ -27,7 +27,11 @@ public class Main {
 	}
 	
 	public static void mostraMaior(double max) {
-		System.out.printf("O maior valor é : %.0f", max);
+		printa("O maior valor é : %.0f", max);
+	}
+	
+	public static void printa(String mensagem, double max) {
+		System.out.printf(mensagem, max);
 	}
 
 }
