@@ -55,7 +55,7 @@ public class Trabalhador {
 	}
 	
 	public Double valorTotal(Integer mes, Integer ano) {
-		Double valorTotal = Double.valueOf(0);
+		Double valorTotal = salarioBase;
 		for (Contrato contrato : contratos) {
 			if(contrato.getDataContrato().getMonthValue() == mes && contrato.getDataContrato().getYear() == ano) {
 				valorTotal += contrato.valorTotal();
