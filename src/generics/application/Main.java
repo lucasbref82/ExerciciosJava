@@ -1,5 +1,6 @@
 package generics.application;
 
+import java.util.Collections;
 import java.util.Scanner;
 
 import generics.service.PrintService;
