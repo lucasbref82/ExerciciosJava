@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Quantos quartos você vai alugar ?");
+		System.out.println("Quantos quartos vocï¿½ vai alugar ?");
 		Aluguel[] vetor = new Aluguel[9];
 		Integer quartos = sc.nextInt();
 		for(int i = 1; i <= quartos; i++) {
@@ -29,5 +29,6 @@ public class Main {
 			builder.append(aluguel.getQuarto()).append(": ").append(aluguel.getNome()).append(", ").append(aluguel.getEmail() + "\n");
 			System.out.print(builder.toString());
 		}
+		sc.close();
 	}
 }

@@ -25,5 +25,6 @@ public class TreinandoFile {
 		
 		boolean sucess = new File(srtPath + "\\novoDiretorio").mkdir();
 		System.out.println("Diretorio criado com sucesso: " + sucess);
+		sc.close();
 	}
 }

@@ -1,6 +1,5 @@
 package excecoes;
 
-import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -11,11 +10,11 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		try {
-			System.out.print("Número do quarto: ");
+			System.out.print("Nï¿½mero do quarto: ");
 			Integer numeroQuarto = sc.nextInt();
 			System.out.print("Data de entrada: ");
 			LocalDate entrada = LocalDate.parse(sc.next(), formatter);
-			System.out.print("Data de saída: ");
+			System.out.print("Data de saï¿½da: ");
 			LocalDate saida = LocalDate.parse(sc.next(), formatter);
 			Reserva reserva = new Reserva(numeroQuarto);
 			reserva.atualizarDatas(entrada, saida);
@@ -24,14 +23,14 @@ public class Main {
 			System.out.println("Entre com os dados atualizados da reserva: ");
 			System.out.print("Data de entrada: ");
 			entrada = LocalDate.parse(sc.next(), formatter);
-			System.out.print("Data de saída: ");
+			System.out.print("Data de saï¿½da: ");
 			saida = LocalDate.parse(sc.next(), formatter);
 			reserva.atualizarDatas(entrada, saida);
 			System.out.println(reserva);
 		} catch (DataInvalidaException e) {
 			e.printStackTrace();
 		} catch (DateTimeParseException e) {
-			System.out.println("Formato de data inválida.");
+			System.out.println("Formato de data invï¿½lida.");
 			e.printStackTrace();
 		}
 		sc.close();
