@@ -10,23 +10,23 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner scanner = new Scanner(System.in);
 		List<Pessoa> pessoas =  new ArrayList<>();
-		System.out.print("Digite o número de pagadores de  impostos: ");
+		System.out.print("Digite o nï¿½mero de pagadores de  impostos: ");
 		int n = scanner.nextInt();
 		for(int i = 1; i <= n; i++) {
 			System.out.println("Dados do pagador de imposto #"+ i);
-			System.out.print("Jurídica ou Física ?");
+			System.out.print("Jurï¿½dica ou Fï¿½sica ?");
 			char tipoPessoa = scanner.next().charAt(0);
 			System.out.print("Nome: ");
 			String nome = scanner.next();
 			System.out.print("Renda anual: ");
 			Double rendaAnual = scanner.nextDouble();
 			if(tipoPessoa == 'j') {
-				System.out.print("Quantidade de funcionários: ");
+				System.out.print("Quantidade de funcionï¿½rios: ");
 				Integer quantidadeFuncionarios = scanner.nextInt();
 				Pessoa pessoa = new PessoaJuridica(nome, rendaAnual, quantidadeFuncionarios);
 				pessoas.add(pessoa);
 			}else {
-				System.out.print("Gastos com saúde: ");
+				System.out.print("Gastos com saï¿½de: ");
 				Double gastosSaude = scanner.nextDouble();
 				Pessoa pessoa = new PessoaFisica(nome, rendaAnual, gastosSaude);
 				pessoas.add(pessoa);
@@ -39,5 +39,6 @@ public class Main {
 			somaImpostos += pessoa.calculaImposto();
 		}
 		System.out.println(String.format("TOTAL DE IMPOSTOS: $ %.2f", somaImpostos));
+		scanner.close();
 	}
 }

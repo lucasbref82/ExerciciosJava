@@ -19,7 +19,7 @@ public class Main {
 		for(int i = 0; i < matrix.length ; i++) {
 			for(int j = 0; j < matrix[i].length; j++) {
 				if(matrix[i][j] == numero) {
-					System.out.println("Posição " + i +", " + j);
+					System.out.println("Posiï¿½ï¿½o " + i +", " + j);
 					if(j > 0) {
 						System.out.println("Esquerda: " + matrix[i][j-1]);
 					}
@@ -35,6 +35,7 @@ public class Main {
 				}
 			}
 		}
+		sc.close();
 	}
 
 }

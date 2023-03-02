@@ -11,7 +11,7 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		List<Forma> formas = new ArrayList<>();
-		System.out.print("Digite o número de formas: ");
+		System.out.print("Digite o nï¿½mero de formas: ");
 		int n = sc.nextInt();
 		for(int i = 1; i <= n; i++) {
 			System.out.println("Forma #" + i);
@@ -31,11 +31,13 @@ public class Main {
 				formas.add(new Circulo(Cor.valueOf(cor), Raio));
 			}
 		}
-		System.out.println("ÁREAS DAS FORMAS : ");
+		System.out.println("ï¿½REAS DAS FORMAS : ");
 		for (Forma forma : formas) {
 			System.out.println(String.format("%.2f", forma.area()));
 			
 		}
+
+		sc.close();
 	}
 
 }

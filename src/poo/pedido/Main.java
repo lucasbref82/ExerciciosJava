@@ -16,19 +16,19 @@ public class Main {
 		String nome = sc.next();
 		System.out.print("Email: ");
 		String email = sc.next();
-		System.out.print("Data aniversário: ");
+		System.out.print("Data aniversï¿½rio: ");
 		LocalDate dataAniversario = LocalDate.parse(sc.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 		System.out.println("Entre com os dados do pedido: ");
 		System.out.print("Status: ");
 		StatusPedido statusPedido = StatusPedido.valueOf(sc.next());
 		Pedido pedido = new Pedido(LocalDateTime.now(), statusPedido, new Cliente(nome, email, dataAniversario));
-		System.out.print("Quantos items terá no pedido ?");
+		System.out.print("Quantos items terï¿½ no pedido ?");
 		int quantidadeItems = sc.nextInt();
 		for (int i = 1; i <= quantidadeItems; i++) {
 			System.out.println("Entre com os dados do item #"+i);
 			System.out.print("Nome do produto: ");
 			String nomeProduto = sc.next();
-			System.out.print("Preço do produto: ");
+			System.out.print("Preï¿½o do produto: ");
 			Double precoProduto = sc.nextDouble();
 			System.out.print("Quantidade do produto: ");
 			Integer quantidade = sc.nextInt();
@@ -36,6 +36,7 @@ public class Main {
 		}
 		System.out.println("Resumo do pedido: ".toUpperCase());
 		System.out.println(pedido.toString());
+		sc.close();
 		
 		
 		
